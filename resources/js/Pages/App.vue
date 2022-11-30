@@ -5,6 +5,8 @@ import { mapState } from "vuex";
 
 export default {
   props: {
+    page: String,
+    lang: String,
     canLogin: Boolean,
     canRegister: Boolean,
     laravelVersion: String,
@@ -18,6 +20,11 @@ export default {
 
 <template>
   <Head title="Welcome" />
+
+  <ul>
+    <li>Page: {{ page }}</li>
+    <li>Lang: {{ lang }}</li>
+  </ul>
 
   <div
     class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8"

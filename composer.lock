@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9037dedcb537558e657baa25dc06c6dc",
+    "content-hash": "84c828eb2e09fc40e56ccc69fa42a0ce",
     "packages": [
         {
             "name": "brick/math",
@@ -503,6 +503,64 @@
                 }
             ],
             "time": "2022-02-20T15:07:15+00:00"
+        },
+        {
+            "name": "fsasvari/laravel-trailing-slash",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsasvari/laravel-trailing-slash.git",
+                "reference": "867538d7a5cd8c1e5bacdbc88e23134eb01ab50f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsasvari/laravel-trailing-slash/zipball/867538d7a5cd8c1e5bacdbc88e23134eb01ab50f",
+                "reference": "867538d7a5cd8c1e5bacdbc88e23134eb01ab50f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/routing": "^9.0",
+                "php": "^8.0.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4.2",
+                "phpunit/phpunit": "^9.4.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelTrailingSlash\\RoutingServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelTrailingSlash\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frano Sasvari",
+                    "email": "sasvari.frano@gmail.com"
+                }
+            ],
+            "description": "The package that adds redirection with trailing slash to Laravel framework.",
+            "homepage": "https://github.com/fsasvari/laravel-trailing-slash",
+            "keywords": [
+                "laravel",
+                "php",
+                "redirect"
+            ],
+            "support": {
+                "issues": "https://github.com/fsasvari/laravel-trailing-slash/issues",
+                "source": "https://github.com/fsasvari/laravel-trailing-slash/tree/v4.0.0"
+            },
+            "time": "2022-07-27T14:07:50+00:00"
         },
         {
             "name": "graham-campbell/result-type",
