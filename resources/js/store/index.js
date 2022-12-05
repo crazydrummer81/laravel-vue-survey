@@ -2,8 +2,8 @@ import {createStore} from 'vuex';
 const store = createStore({
   state: {
     user: {
-      data: { name: 'Guest' },
-      token: null,
+      data: {},
+      token: 123,
     }
   },
   getters: {},

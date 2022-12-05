@@ -7,6 +7,7 @@ import { InertiaProgress } from '@inertiajs/progress';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import store from '@/store';
+import router from '@/router';
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
@@ -14,12 +15,16 @@ createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
     setup({ el, app, props, plugin }) {
-        return createApp({ render: () => h(app, props) })
-            .use(plugin)
-            .use(store)
-            .use(ZiggyVue, Ziggy)
-            .mount(el);
+      const vueApp = createApp({ render: () => h(app, props) })
+        .use(plugin)
+        .use(store)
+        .use(router)
+        // .use(ZiggyVue, Ziggy)
+        // .mixin({ methods: { appRoute } })
+        .mount(el);
+      return vueApp;
     },
 });
+
 
 InertiaProgress.init({ color: '#4B5563' });
